@@ -5,17 +5,17 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/m3t41/gitops-customer.git
+      repoURL: https://github.com/m3t41/gitops-managed-apps.git
       revision: HEAD
       directories:
-      - path: /*
+      - path: k8s/*
   template:
     metadata:
       name: '{{path.basename}}'
     spec:
       project: default
       source:
-        repoURL: https://github.com/m3t41/gitops-customer.git
+        repoURL: https://github.com/m3t41/gitops-managed-apps.git
         targetRevision: HEAD
         path: '{{path}}'
       destination:
