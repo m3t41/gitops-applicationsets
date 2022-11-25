@@ -8,7 +8,7 @@ spec:
       repoURL: https://github.com/m3t41/gitops-managed-apps.git
       revision: HEAD
       directories:
-      - path: k8s/**
+      - path: k8s/**/config.json
   template:
     metadata:
       name: '{{path.basename}}'
@@ -19,5 +19,5 @@ spec:
         targetRevision: HEAD
         path: '{{path}}'
       destination:
-        server: https://kubernetes.default.svc
-        namespace: test
+        server: {{server}}
+        namespace: {{path.1}}
