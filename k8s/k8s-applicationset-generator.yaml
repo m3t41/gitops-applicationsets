@@ -8,7 +8,7 @@ spec:
       repoURL: https://github.com/m3t41/gitops-managed-apps.git
       revision: HEAD
       directories:
-      - path: k8s/**/config.json
+      - path: /**/config.json
   template:
     metadata:
       name: '{{path.basename}}'
