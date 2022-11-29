@@ -9,8 +9,6 @@ spec:
       revision: HEAD
       files:
       - path: openshift/**/config.json
-  elements:
-      - folder: .
   template:
     metadata:
       name: '{{name}}'
