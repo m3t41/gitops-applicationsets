@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cluster-addons
+  name: APPLICATIONSET-Openshift
 spec:
   generators:
   - git:
@@ -11,14 +11,13 @@ spec:
       - path: openshift/**/config.json
   template:
     metadata:
-      name: '{{name}}'
+      name: '{{appname}}'
     spec:
       project: default
       source:
-        repoURL: '{{repo}}'
+        repoURL: '{{repourl}}'
         targetRevision: HEAD
-        path: '{{folder}}'
+        path: '{{repofolder}}'
       destination:
         server: https://kubernetes.default.svc
-        #server: https://49.12.216.11:6443
         namespace: '{{namespace}}'
