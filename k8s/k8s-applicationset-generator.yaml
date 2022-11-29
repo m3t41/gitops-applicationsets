@@ -15,7 +15,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/m3t41/gitops-managed-apps.git
+        repoURL: {{repo}}
         targetRevision: HEAD
         path: '{{path}}'
       destination:
