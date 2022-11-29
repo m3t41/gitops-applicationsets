@@ -19,5 +19,6 @@ spec:
         targetRevision: HEAD
         path: '{{folder}}'
       destination:
-        server: https://kubernetes.default.svc
+        #server: https://kubernetes.default.svc
+        server: https://49.12.216.11:6443
         namespace: '{{namespace}}'
