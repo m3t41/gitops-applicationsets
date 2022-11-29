@@ -11,7 +11,7 @@ spec:
       - path: openshift/**/config.json
   template:
     metadata:
-      name: '{{appname}}'
+      name: '{{appsetname}}'
     spec:
       project: default
       source:
