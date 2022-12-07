@@ -13,7 +13,7 @@ spec:
     metadata:
       name: '{{appsetname}}'
     spec:
-      project: default
+      project: '{{project}}'
       source:
         repoURL: '{{repourl}}'
         targetRevision: HEAD
